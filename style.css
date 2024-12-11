@@ -1,0 +1,181 @@
+/* Déclaration des variables pour les couleurs et espacements */
+:root {
+    --primary-color: #2a9d8f; /* Vert-bleu moderne */
+    --secondary-color: #264653; /* Bleu foncé */
+    --accent-color: #e9c46a; /* Jaune vif pour accents */
+    --background-color: #f4f4f9; /* Fond clair neutre */
+    --text-color: #333; /* Texte principal */
+    --font-family: 'Roboto', sans-serif;
+
+    --main-padding: 20px;
+    --main-margin: 20px;
+}
+
+/* Général */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* En-tête (Navigation) */
+header {
+    background-color: var(--secondary-color);
+    padding: var(--main-padding);
+    color: white;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-right: var(--main-margin);
+}
+
+header nav ul li a {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Section Hero (Accueil) */
+.hero-section {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #e0f2f1;
+}
+
+.hero-section a {
+    background-color: var(--accent-color);
+    padding: 10px 20px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-section a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* Section About */
+.about-section {
+    background-color: white;
+    padding: 60px var(--main-padding);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.about-section p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--main-padding);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Boutons et interactions */
+button {
+    background-color: var(--accent-color);
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
